@@ -86,13 +86,7 @@ const Product = () => {
           <option value="lowToHigh">Price: Low to High</option>
           <option value="highToLow">Price: High to Low</option>
         </select>
-      </div>
-
-      <div className="pagination">
-        <button onClick={() => handlepagination("prev")} disabled={currentPage === 1}>Previous</button>
-        <span>Page {currentPage} of {totalPages}</span>
-        <button onClick={() => handlepagination("next")} disabled={currentPage === totalPages}>Next</button>
-      </div>
+      </div>  
       <div className="product-container">
         {paginatedProducts.map((product) => (
           <div className="product-card" key={product.id}>
@@ -103,6 +97,11 @@ const Product = () => {
             <Link to={`/description/${product.id}`}> <button className="btn">View Product Details</button></Link>
           </div>
         ))}
+      </div>
+      <div className="pagination">
+        <button onClick={() => handlepagination("prev")} disabled={currentPage === 1}>Previous</button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button onClick={() => handlepagination("next")} disabled={currentPage === totalPages}>Next</button>
       </div>
     </div>
   );
