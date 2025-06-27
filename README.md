@@ -38,4 +38,4 @@ To run the project locally:
 ```bash
 git clone https://github.com/ChetanSapkale/React_mini_web.fe.git
 npm install
-npm run start
+npm run dev
